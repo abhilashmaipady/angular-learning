@@ -16,7 +16,7 @@ import * as json from '../assets/test.json';
   providers: [
     {
       provide: IncToken,
-      useValue: json
+      useValue: (json as any).default
     }
   ],
   bootstrap: [AppComponent]
