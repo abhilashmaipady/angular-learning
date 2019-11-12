@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 import { IncToken } from './app.config';
 
 import * as json from '../assets/test.json';
+import { SharedComponent } from './shared/shared.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SharedComponent
   ],
   imports: [
     BrowserModule
