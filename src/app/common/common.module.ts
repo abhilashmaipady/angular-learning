@@ -11,6 +11,9 @@ import { TabComponent } from './component/tabs/tab/tab.component';
   imports: [
     CommonModule,
     CommonRoutingModule
+  ],
+  exports: [
+    TabsComponent, TabComponent
   ]
 })
-export class CommonModule { }
+export class CommonItemsModule { }

@@ -1,11 +1,13 @@
 <ul class="nav nav-tabs" id="navTab" role="tablist">
-  <li class="nav-item" *ngFor="let tab of tabs">
-    <a class="nav-link" id="{{tab.id}}-tab" data-toggle="tab" href="#{{tab.id}}" role="tab" aria-controls="{{tab.id}}"
-      aria-selected="true">{{tab.id}}</a>
+  <li class="nav-item" *ngFor="let tab of tabs; let index=index">
+    <a class="nav-link" [ngClass]="index == 0 ? 'active' : ''" id="{{tab.tabId}}-tab" data-toggle="tab" href="#{{tab.tabId}}" role="tab" [attr.aria-controls]="tab.tabId"
+      aria-selected="true">{{tab.tabId}}</a>
   </li>
 </ul>
 <div class="tab-content" id="navTabContent">
-  <div class="tab-pane fade" id="{{tab.id}}" role="tabpanel" aria-labelledby="{{tab.id}}-tab" *ngFor="let tab of tabs">
-    {{tab}}
+  <div class="tab-pane fade" [ngClass]="index == 0 ? 'show active' : ''" id="{{tab.tabId}}" role="tabpanel"
+    [attr.aria-labelledby]="tab.tabId+'-tab'" *ngFor="let tab of tabs; let index=index">
+     <ng-template [ngTemplateOutlet]="templateRef" [ngTemplateOutletContext]="{$implicit: tab}"></ng-template>
+    <!-- <ng-content [attr.select]="'[tabId='+tab.tabId+']'"></ng-content> -->
   </div>
 </div>

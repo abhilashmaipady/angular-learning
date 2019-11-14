@@ -1,13 +1,13 @@
-import { Component, OnInit, QueryList, ContentChildren, AfterViewInit } from '@angular/core';
+import { Component, OnInit, QueryList, ContentChildren, AfterViewInit, TemplateRef, ContentChild } from '@angular/core';
 import { TabComponent } from './tab/tab.component';
 
 @Component({
   selector: 'app-tabs',
-  templateUrl: './tabs.component.html',
-  styleUrls: ['./tabs.component.css']
+  templateUrl: './tabs.component.html'
 })
 export class TabsComponent implements OnInit, AfterViewInit {
 
+  @ContentChild(TemplateRef, { static: true }) templateRef: TemplateRef<TabsComponent>;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   constructor() { }
 
