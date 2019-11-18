@@ -7,7 +7,7 @@ import { TabComponent } from './tab/tab.component';
 })
 export class TabsComponent implements OnInit, AfterViewInit {
 
-  @ContentChild(TemplateRef, { static: true }) templateRef: TemplateRef<TabsComponent>;
+  // @ContentChild(TemplateRef, { static: true }) templateRef: TemplateRef<TabComponent>;
   @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
   constructor() { }
 
@@ -15,6 +15,7 @@ export class TabsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.tabs.forEach(tab => console.log(tab.content));
   }
 
 }
