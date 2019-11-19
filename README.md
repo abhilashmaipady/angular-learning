@@ -26,3 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # angular-learning
+
+# Reference Links
+1. https://ultimatecourses.com/blog/transclusion-in-angular-2-with-ng-content#Angular_Content_Projection
+2. https://medium.com/@IMM9O/angular-content-projection-the-complete-guide-45d3bc1692f2
+3. https://blog.angulartraining.com/tutorial-transclusion-content-projection-in-angular-1fea8f4421bd
+4. https://www.freecodecamp.org/news/everything-you-need-to-know-about-ng-template-ng-content-ng-container-and-ngtemplateoutlet-4b7b51223691/
