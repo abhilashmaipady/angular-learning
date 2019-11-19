@@ -1,4 +1,8 @@
 <app-tabs>
-  <app-tab tabId="abc">abc</app-tab>
-  <app-tab tabId="xyz">xyz</app-tab>
+  <app-tab tabId="abc" [content]="abc">
+    <ng-template #abc>abc</ng-template>
+  </app-tab>
+  <app-tab tabId="xyz" [content]="xyz">
+    <ng-template #xyz>xyz</ng-template>
+  </app-tab>
 </app-tabs>

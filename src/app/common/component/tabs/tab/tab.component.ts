@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, TemplateRef, ElementRef, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, Input, TemplateRef, ElementRef, ViewContainerRef, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
@@ -8,10 +8,10 @@ export class TabComponent implements OnInit {
 
   @Input() tabId !: string;
   @Input() tabHeader !: string;
-  content: any;
+  @Input() content: TemplateRef<any>;
   constructor(private viewContainerRef: ViewContainerRef) {
     // console.log(elementRef);
-    this.content = viewContainerRef.element;
+    // this.content = viewContainerRef.element;
   }
 
   ngOnInit() {

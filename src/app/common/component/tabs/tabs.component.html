@@ -7,7 +7,7 @@
 <div class="tab-content" id="navTabContent">
   <div class="tab-pane fade" [ngClass]="index == 0 ? 'show active' : ''" id="{{tab.tabId}}" role="tabpanel"
     [attr.aria-labelledby]="tab.tabId+'-tab'" *ngFor="let tab of tabs; let index=index">
-     <ng-template [ngTemplateOutlet]="tab.content"></ng-template>
+     <ng-container [ngTemplateOutlet]="tab.content"></ng-container>
     <!-- <ng-content [attr.select]="'[tabId='+tab.tabId+']'"></ng-content> -->
   </div>
 </div>

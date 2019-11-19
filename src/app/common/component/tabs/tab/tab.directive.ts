@@ -1,10 +1,10 @@
-import { Directive } from '@angular/core';
+import { Directive, TemplateRef } from '@angular/core';
 
 @Directive({
   selector: '[appTab]'
 })
 export class TabDirective {
 
-  constructor() { }
+  constructor(private templateRef: TemplateRef<any>) { }
 
 }
