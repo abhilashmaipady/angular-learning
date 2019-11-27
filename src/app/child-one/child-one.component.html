@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="card-header"><b>CHILD 1</b></div>
+    <div class="card-body">
+        <dp-date-picker id="datePicker" name="datePicker" [theme]="'dp-material'" [(ngModel)]="date"
+          [config]="datePickerConfig" (onSelect)="trimArray($event)">
+        </dp-date-picker>
+    </div>
+</div>

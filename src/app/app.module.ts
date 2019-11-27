@@ -7,15 +7,24 @@ import { IncToken } from './app.config';
 import * as json from '../assets/test.json';
 import { SharedComponent } from './shared/shared.component';
 import { CommonItemsModule } from './common/common.module';
-
+import { DpDatePickerModule } from 'ng2-date-picker';
+import { ChildOneComponent } from './child-one/child-one.component';
+import { ChildTwoComponent } from './child-two/child-two.component';
+import { FormsModule } from '@angular/forms';
+import { DateComponent } from './date/date.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SharedComponent
+    SharedComponent,
+    ChildOneComponent,
+    ChildTwoComponent,
+    DateComponent
   ],
   imports: [
     BrowserModule,
-    CommonItemsModule
+    FormsModule,
+    CommonItemsModule,
+    DpDatePickerModule
   ],
   providers: [
     {
