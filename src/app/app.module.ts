@@ -12,19 +12,25 @@ import { ChildOneComponent } from './child-one/child-one.component';
 import { ChildTwoComponent } from './child-two/child-two.component';
 import { FormsModule } from '@angular/forms';
 import { DateComponent } from './date/date.component';
+import { SlickGridComponent } from './slick-grid/slick-grid.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AngularSlickgridModule } from 'angular-slickgrid';
 @NgModule({
   declarations: [
     AppComponent,
     SharedComponent,
     ChildOneComponent,
     ChildTwoComponent,
-    DateComponent
+    DateComponent,
+    SlickGridComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     CommonItemsModule,
-    DpDatePickerModule
+    DpDatePickerModule,
+    AngularSlickgridModule.forRoot()
   ],
   providers: [
     {
