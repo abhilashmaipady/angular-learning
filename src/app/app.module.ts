@@ -15,6 +15,7 @@ import { DateComponent } from './date/date.component';
 import { SlickGridComponent } from './slick-grid/slick-grid.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularSlickgridModule } from 'angular-slickgrid';
+import { DateService } from './date/date.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { AngularSlickgridModule } from 'angular-slickgrid';
     {
       provide: IncToken,
       useValue: (json as any).default
-    }
+    },
+    DateService
   ],
   bootstrap: [AppComponent]
 })

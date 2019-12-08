@@ -8,19 +8,11 @@ import { IDatePickerConfig } from 'ng2-date-picker';
 })
 export class ChildOneComponent implements OnInit {
 
-  date: moment.Moment | Array<moment.Moment>;
-  datePickerConfig: IDatePickerConfig = {
-    format: 'DD-MM-YYYY',
-    allowMultiSelect: true
-  }
+
   constructor() { }
 
   ngOnInit() {
   }
-  trimArray(event) {
-    if (this.date instanceof Array && this.date.length > 2) {
-      this.date = this.date.slice(this.date.length - 2);
-    }
-  }
+
 
 }
