@@ -1,3 +1,3 @@
 <dp-date-picker id="datePicker" name="datePicker" [theme]="'dp-material'" [(ngModel)]="date" [config]="datePickerConfig"
-  (onSelect)="trimArray($event)">
+  (onSelect)="readValue($event)" (blur)="onBlur()" #datepicker>
 </dp-date-picker>

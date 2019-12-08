@@ -8,11 +8,17 @@ import { IDatePickerConfig } from 'ng2-date-picker';
 })
 export class ChildOneComponent implements OnInit {
 
-
-  constructor() { }
+  today = new Date();
+  otherDay = new Date();
+  date: Date | Array<Date> = [this.today, this.otherDay];
+  constructor() {
+    this.otherDay.setDate(25);
+  }
 
   ngOnInit() {
   }
-
+  onChange(event) {
+    console.log(event);
+  }
 
 }
