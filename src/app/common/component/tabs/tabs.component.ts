@@ -3,12 +3,15 @@ import { TabComponent } from './tab/tab.component';
 
 @Component({
   selector: 'app-tabs',
-  templateUrl: './tabs.component.html'
+  templateUrl: './tabs.component.html',
+  queries: {
+    tabs: new ContentChildren(TabComponent)
+  }
 })
 export class TabsComponent implements OnInit, AfterViewInit {
 
   // @ContentChild(TemplateRef, { static: true }) templateRef: TemplateRef<TabComponent>;
-  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+  tabs: QueryList<TabComponent>;
   constructor() { }
 
   ngOnInit() {
