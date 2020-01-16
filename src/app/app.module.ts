@@ -16,6 +16,7 @@ import { SlickGridComponent } from './slick-grid/slick-grid.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import { DateService } from './date/date.service';
+import { SampleModule } from './sample/sample.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { DateService } from './date/date.service';
     FormsModule,
     CommonItemsModule,
     DpDatePickerModule,
-    AngularSlickgridModule.forRoot()
+    AngularSlickgridModule.forRoot(),
+    SampleModule.forRoot('xyz')
   ],
   providers: [
     {

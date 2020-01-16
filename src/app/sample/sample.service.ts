@@ -6,11 +6,12 @@ import { SAMPLE_TOKEN } from './sample.config';
 })
 export class SampleService {
   private data: string;
-  constructor(@Inject(SAMPLE_TOKEN) temp: string) {
+  constructor(@Inject(SAMPLE_TOKEN) private temp: string) {
     this.data = temp;
     console.log(this.data);
   }
   getData() {
+    console.log('temp: ' + this.temp);
     return this.data;
   }
 }
