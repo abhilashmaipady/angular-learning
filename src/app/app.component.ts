@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { IncToken } from './app.config';
+import { SampleService } from './sample/sample.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { IncToken } from './app.config';
 })
 export class AppComponent {
   title = 'app';
-  constructor(@Inject(IncToken) private test: any) {
-    console.log(this.test);
+  constructor(@Inject(IncToken) private test: any, private sampleService: SampleService) {
+    console.log('From app module: ' + sampleService.getData());
   }
 }

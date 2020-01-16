@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SampleComponent } from './sample/sample.component';
+import { LazyComponent } from './lazy/lazy.component';
 
 
 const routes: Routes = [
   {
-    path: '', component: SampleComponent
+    path: '', component: LazyComponent
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SampleRoutingModule { }
+export class LazyRoutingModule { }
