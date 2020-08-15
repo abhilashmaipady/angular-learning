@@ -18,7 +18,7 @@ import { SampleComponent } from './sample/sample.component';
   ]
 })
 export class SampleModule {
-  static forRoot(data: string): ModuleWithProviders {
+  static forRoot(data: string): ModuleWithProviders<SampleModule> {
     return {
       ngModule: SampleModule,
       providers: [
