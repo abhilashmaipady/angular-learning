@@ -7,7 +7,6 @@ import { IncToken } from './app.config';
 import * as json from '../assets/test.json';
 import { SharedComponent } from './shared/shared.component';
 import { CommonItemsModule } from './common/common.module';
-import { DpDatePickerModule } from 'ng2-date-picker';
 import { ChildOneComponent } from './child-one/child-one.component';
 import { ChildTwoComponent } from './child-two/child-two.component';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularSlickgridModule } from 'angular-slickgrid';
 import { DateService } from './date/date.service';
 import { SampleModule } from './sample/sample.module';
+import { MatDatepickerModule } from '@angular/material/datepicker'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from "@angular/material-moment-adapter";
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,16 +33,17 @@ import { SampleModule } from './sample/sample.module';
     BrowserModule,
     FormsModule,
     CommonItemsModule,
-    DpDatePickerModule,
     AngularSlickgridModule.forRoot(),
-    SampleModule.forRoot('xyz')
+    SampleModule.forRoot('xyz'),
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatMomentDateModule
   ],
   providers: [
     {
       provide: IncToken,
       useValue: (json as any).default
-    },
-    DateService
+    }
   ],
   bootstrap: [AppComponent]
 })

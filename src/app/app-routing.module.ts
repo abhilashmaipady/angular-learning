@@ -9,7 +9,9 @@ import { CommonComponent } from './common/common/common.component';
 const routes: Route[] = [
   { path: '', component: SlickGridComponent },
   { path: 'common', component: CommonComponent },
-  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) }
+  { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
+  { path: 'sample', loadChildren: () => import('./sample/sample.module').then(m => m.SampleModule) },
+  { path: 'reactive', loadChildren: () => import('./reactive/reactive.module').then(m => m.ReactiveModule) }
 ];
 @NgModule({
   declarations: [],
